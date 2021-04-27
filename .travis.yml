@@ -19,5 +19,5 @@ script:
   - docker tag udagram_feed danotsonof/udagram_feed:latest
 
 #after_success:
-  #- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  #- docker push danotsonof/udagram_feed
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push danotsonof/udagram_feed
