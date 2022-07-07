@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 13
+  - 16
 
 services:
   - docker
@@ -15,9 +15,9 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t udagram_feed .
-  - docker tag udagram_feed danotsonof/udagram_feed:latest
+  - docker build -t udagram-feed-api .
+  - docker tag udagram-feed-api danotsonof/udagram-feed-api:latest
 
 #after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push danotsonof/udagram_feed
+  - docker push danotsonof/udagram-feed-api
